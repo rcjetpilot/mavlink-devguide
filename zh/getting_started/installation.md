@@ -1,0 +1,46 @@
+# 安装MAVLink工具链
+
+This topic explains how to install the [MAVLink toolchain](https://github.com/mavlink/mavlink). The toolchain includes the [XML message definitions](../messages/index.md) as well as the GUI/command line tools that use the definitions to [Generate MAVLink Source Files](../getting_started/generate_libraries.md).
+
+:::tip
+You do not need to install or generate the source files if you are using the C programming language and [standard definitions](../messages/index.md) or a [dialect](../messages/dialects.md#dialects) published in the MAVLink repository.
+Just get the [prebuilt libraries](../index.md#prebuilt_libraries) and then jump to [Using C Libraries](../mavgen_c/index.md).
+:::
+
+## 先决条件
+
+The requirements for using the _MAVLink generator_ are:
+
+- Python 3.3+
+- pip3 install future
+- [TkInter](https://wiki.python.org/moin/TkInter) (required to use the GUI tool), included as of Python 3.7.
+
+如果您要创建新的XML定义，您还应该安装lxml和libxml2以进行XML的验证和格式化。
+
+## 安装
+
+安装MAVLink工具链：
+
+1. Install Python 3.6+:
+
+   - **Windows:** Download from [Python for Windows](https://www.python.org/downloads/)
+   - **Ubuntu Linux** Make sure Python and Pip are both installed:
+
+     ```
+     sudo apt install python3-tk
+     ```
+
+2. Clone the official [mavlink repo](https://github.com/mavlink/mavlink) or your fork with your custom dialect:
+
+   ```
+   git clone https://github.com/mavlink/mavlink.git --recursive
+   cd mavlink
+   ```
+
+3. Install the required packages:
+
+   ```
+   sudo apt install python3-pip
+   ```
+
+Now you are ready to [Generate MAVLink Libraries](../getting_started/generate_libraries.md).

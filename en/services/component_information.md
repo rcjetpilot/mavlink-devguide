@@ -1,0 +1,1 @@
+<Redirect to="../services/component_metadata" />
